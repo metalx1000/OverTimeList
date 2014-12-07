@@ -18,6 +18,19 @@
              
                 $("button").click(function(){get_json()});   
                 get_json();
+
+                $("#listview").on('swipe','li',function(){
+                    var pid=$(this).attr("pid");
+                    var name=$(this).attr("name");
+                    var phone=$(this).attr("phone");
+                    var rank=$(this).attr("rank");
+
+                    $("#popnote").html(name + " <a href='tel:"+phone+"'>"+phone+"</a>");
+                    $("#poptitle").html(name);
+                    $.mobile.changePage( "#popup", { role: "dialog" } );
+                    
+                });
+
                 
             });
 
@@ -83,5 +96,17 @@
  
         </div>
     </div>
+
+<!--popup-->
+    <div data-role="page" data-theme="a" id="popup">
+        <div data-role="header" data-position="inline">
+            <h1 id="poptitle">Notes</h1>
+        </div>
+
+        <div data-role="content" data-theme="a">
+            <label id="popnote"></label>
+        </div>
+    </div>
+
 </body>
 </html>
