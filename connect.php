@@ -1,7 +1,5 @@
 <?php
-$host="localhost";
-$user="root";
-$pwd="root";
+include("credentials.php");
 $db="OverTime";
 
 // Create connection
