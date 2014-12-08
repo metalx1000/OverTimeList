@@ -2,7 +2,7 @@
 $host="localhost";
 $user="root";
 $pwd="root";
-$db="test";
+$db="OverTime";
 
 // Create connection
 $con=mysqli_connect($host,$user,$pwd,$db);

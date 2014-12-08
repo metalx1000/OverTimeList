@@ -1,9 +1,9 @@
 <?php
 
 include('connect.php');
-$table="mydata2";
+include('table.php');
 
-$result = mysqli_query($con,"SELECT * FROM $table");
+$result = mysqli_query($con,"SELECT * FROM $table2");
 
 $rows = array();
 
